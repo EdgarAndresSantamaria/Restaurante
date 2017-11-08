@@ -1,4 +1,6 @@
 <?php
+include("menu.php");
+include("login.php");
 session_start();
 if (isset($_SESSION['k_username'])) {
     if($_SESSION['k_username']=='admin@puzzle.com'){
@@ -9,8 +11,7 @@ if (isset($_SESSION['k_username'])) {
         </style>';    
     }
 }
-include("menu.php");
-include("login.php");
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict// EN " " htto://www.w3.org/TR/xhtmll/DTD/xhtmll-strict.dtd">
 <html>
@@ -43,20 +44,9 @@ include("login.php");
                 });            
             });
         </script>
+	<script type="text/javascript" src="js//validarLogin.js"></script>
 </head>
 <SCRIPT language="JavaScript" type="text/javascript"> 
-function validaEmail(campo) {
-     var valor = campo.value;
-    if(!(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/.test(valor)) ) {
-        alert("El email introducido no es válido.");
-        document.getElementById("email").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-function validaPass1(campo) {
     var valor = campo.value;
     if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
         alert("Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales.");
@@ -170,8 +160,6 @@ function validaPass1(campo) {
 <div class="clear">
     <br>
     </div>
-
-
-
 </body>
 </html>
+

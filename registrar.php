@@ -214,16 +214,16 @@ else{//si se ha enviado
                 if($sentencia){
 					//registrado satisfactorio...pasamos a vista cliente
                     print "<div id='contenedor'>";
-                    print"<h1 id='resultado'>Se ha añadido un usuario nuevo en la tabla $tabla.</h1>";
-                    print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='reserva.php'\" />";
+                    print"<h1 id='resultado'>Se ha a&ntilde;adido un nuevo usuario </h1>";
+                    print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='reserva.php'\" />";
                     print "</div>";
                     $_SESSION["k_username"] = $email;
                 }
                 else{
 					//registrado insatisfactorio..
                     print "<div id='contenedor'>";
-                    print"<h1 id='resultado'>No ha podido añadir un usuario en la tabla $tabla.</h1>"; 
-                    print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+                    print"<h1 id='resultado'>No ha podido a&ntilde;adir un usuario en la tabla $tabla.</h1>"; 
+                    print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
                     print "</div>";
                     exit();
                 }

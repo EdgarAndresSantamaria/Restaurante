@@ -129,11 +129,11 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
            <?php mostrarLogin(); ?>
         </div>
     </div>
-     <div id="menu">
+    <div id="menu">
             <ul>
              <?php mostrarMenu(); ?>
             </ul>
-    </div> 
+    </div>
     <div id="general">
         <div id="opciones">
             <h2>Opciones de platos:</h2>
@@ -172,7 +172,7 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
     </div>
      <div id="ultima">
         <form action="null" style="text-align:center;">
-            <input onclick="alert('La última vez que visitaste esta página fue: \n' + Cuando())" type="button" value="Última visita">
+            <input onclick="alert('La &uacute;ltima vez que visitaste esta p&aacute;gina fue: \n' + Cuando())" type="button" value="&uacute;ltima visita">
         </form>
    
      </div>

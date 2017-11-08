@@ -7,6 +7,7 @@ session_start();
 <html>
 <head>
 <link href="css/estilos.css" rel="stylesheet" type="text/css">  
+<script type="text/javascript" src="js//validarLogin.js"></script>
 <link rel="shortcut icon" href="imagenes/icono.ico"> 
     <title>Contacto - Puzzle</title>
 </head>
@@ -23,28 +24,6 @@ session_start();
 <body>
    
    <SCRIPT language="JavaScript" type="text/javascript"> 
-    function validaEmail(campo) {
-             var valor = campo.value;
-            if(!(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/.test(valor)) ) {
-                alert("El email introducido no es válido.");
-                document.getElementById("email").focus();
-                return false;
-            }
-            else{
-                return true;
-            }
-        }  
-    function validaPass1(campo) {
-            var valor = campo.value;
-            if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
-                alert("El contraseña introducida no es válida.");
-                document.getElementById("password1").focus();
-                return false;
-            }
-            else{
-                return true;
-            }
-        }
     function validaPass2() {
             var valor1 = document.getElementById("password1").value;
             var valor2 = document.getElementById("password2").value;
@@ -313,7 +292,7 @@ else{
         
         $encabezados = "From: $email\nReply-To: $email\nContent-Type: text/html; charset=iso-8859-1" ;
         print "<div id='contenedor'>";
-        mail($emailAdmin, $asunto, $contenido, $encabezados) or die ("<h1 id='resultado'>No se ha podido enviar tu mensaje. Ha ocurrido un error</h1>") ;
+        mail($emailAdmin, $asunto, $contenido, $encabezados) or die ("<h1 id='resultado'>No se ha podido enviar tu mensaje./h1>") ;
         echo "<h1 id='resultado'>Tu mensaje ha sido enviado con este contenido:</h1>" ;
         echo "<p style='margin: 0 5% 5%;'><b>$contenido</b></p>" ;
         print"<br><input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='contacto.php'\" />";

@@ -16,7 +16,6 @@
             print "<i>Error numero</i>".mysqli_connect_errno()."<i>equivalente a:</i>".mysqli_connect_error();
             exit();
         }
-         print "<h1>Menu Vegetariano - 15euros</h1><br>";
 		//LISTAR         
         #escribimos la sentencia MYSQL
 		if($cat!=0){
@@ -30,7 +29,6 @@
         #tenemos completa la sentencia MYSQL solo falta ejecutarla crear la conexion y ejecutarla
         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
-            print"<h2>Entrantes</h2>";
             if(mysqli_affected_rows($conectar)>0){
 				//si hay resultados...
                  print "<div >";
