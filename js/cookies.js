@@ -120,7 +120,7 @@ function Item(){
 // devuelve  -- Miercoles, 21 de Enero de 2004 a las 12:31.
 //-------------------------------------------------------------
 function FechaEnCastellano(pfecha){
-   var ndia = new Item('Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado');
+   var ndia = new Item('Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado');
    var nmes = new Item('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre');
    //var fecha = new Date(document.lastModified);
    var fecha = new Date(pfecha);
