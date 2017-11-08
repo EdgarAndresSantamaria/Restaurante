@@ -129,11 +129,11 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
            <?php mostrarLogin(); ?>
         </div>
     </div>
-    <div id="menu">
+     <div id="menu">
             <ul>
              <?php mostrarMenu(); ?>
             </ul>
-    </div>
+    </div> 
     <div id="general">
         <div id="opciones">
             <h2>Opciones de platos:</h2>

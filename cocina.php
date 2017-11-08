@@ -1,4 +1,14 @@
 <?php
+session_start();
+if (isset($_SESSION['k_username'])) {
+    if($_SESSION['k_username']=='admin@puzzle.com'){
+        echo '<style>
+            div#contenedor{
+                background-color: rgba(255,255,0,0.5);
+            }
+        </style>';    
+    }
+}
 include("menu.php");
 include("login.php");
 ?>
