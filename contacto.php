@@ -282,7 +282,7 @@ session_start();
 <?php
 }
 else{
-        $emailAdmin=$_REQUEST['emailAdmin'];
+        $emailAdmin="maitane_3_@hotmail.com";//$_REQUEST['emailAdmin'];
         $nombre=$_REQUEST['nombre'];
         $apellidos=$_REQUEST['apellidos'];
         $email=$_REQUEST['email'];
@@ -292,8 +292,13 @@ else{
         
         $encabezados = "From: $email\nReply-To: $email\nContent-Type: text/html; charset=iso-8859-1" ;
         print "<div id='contenedor'>";
-        mail($emailAdmin, $asunto, $contenido, $encabezados) or die ("<h1 id='resultado'>No se ha podido enviar tu mensaje./h1>") ;
-        echo "<h1 id='resultado'>Tu mensaje ha sido enviado con este contenido:</h1>" ;
+        $bool=mail($emailAdmin, $asunto, $contenido, $encabezados) or die ("<h1 id='resultado'>No se ha podido enviar tu mensaje.</h1>") ;
+		if($bool){
+			echo "Mensaje enviado";
+		}else{
+			echo "Mensaje no enviado";
+		}
+		echo "<h1 id='resultado'>Tu mensaje ha sido enviado con este contenido:</h1>" ;
         echo "<p style='margin: 0 5% 5%;'><b>$contenido</b></p>" ;
         print"<br><input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='contacto.php'\" />";
         print "</div>"; 

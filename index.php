@@ -7,10 +7,12 @@ session_start();
 <html>
 <head>
 <link href="css/estilos.css" rel="stylesheet" type="text/css"> 
-<link rel="stylesheet" type="text/css" href="slider//style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="slider/style.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="slider/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
 <link rel="shortcut icon" href="imagenes/icono.ico">
-<script type="text/javascript" src="slider//jquery.js"></script>
-<script type="text/javascript" src="js//validarLogin.js"></script>
+<script type="text/javascript" src="slider/jquery.js"></script>
     <title>Inicio - Puzzle</title>
 </head>
 
@@ -60,37 +62,39 @@ session_start();
                     siguiendo las indicaciones.</b> </em>
                 <br />
             </p>
-            <br>
-			<!--wowSlider-->
+               <br>
             <div id="wowslider-container1">
-	<div class="ws_images"><ul>
-<li><img src="imagenes/slider/2l0e0210.jpg" alt="Delicias de queso fresco" title="Delicias de queso fresco" id="wows1_0"/></li>
-<li><img src="imagenes/slider/f58fd__catering_16.jpg" alt="Postre de Frutas" title="Postre de Frutas" id="wows1_1"/></li>
-<li><img src="imagenes/slider/me1.jpg" alt="Esparragos con hojaldre" title="Esparragos con hojaldre" id="wows1_2"/></li>
-<li><img src="imagenes/slider/plato2.jpg" alt="Judias en primavera" title="Judias en primavera" id="wows1_3"/></li>
-<li><img src="imagenes/slider/plato3.jpg" alt="Pulpo con verduras" title="Pulpo con verduras" id="wows1_4"/></li>
-<li><img src="imagenes/slider/plato4.jpg" alt="Solomillos a la parrilla" title="Solomillos a la parrilla" id="wows1_5"/></li>
-<li><img src="imagenes/slider/plato5.jpg" alt="Tortellinis con setas" title="Tortellinis con setas" id="wows1_6"/></li>
-<li><img src="imagenes/slider/postredecorado.jpg" alt="Mus de chocolate" title="Mus de chocolate" id="wows1_7"/></li>
-<li><img src="imagenes/slider/rest_72.jpg" alt="Nido de verduras con chuleta" title="Nido de verduras con chuleta" id="wows1_8"/></li>
-</ul></div>
-<div class="ws_bullets"><div>
-<a href="#" title="Delicias de queso fresco"><img src="imagenes/slider/2l0e0210.jpg" alt="Delicias de queso fresco"/>1</a>
-<a href="#" title="Postre de Frutas"><img src="imagenes/slider/f58fd__catering_16.jpg" alt="Postre de Frutas"/>2</a>
-<a href="#" title="Esparragos con hojaldre"><img src="imagenes/slider/me1.jpg" alt="Esparragos con hojaldre"/>3</a>
-<a href="#" title="Judias en primavera"><img src="imagenes/slider/plato2.jpg" alt="Judias en primavera"/>4</a>
-<a href="#" title="Pulpo con verduras"><img src="imagenes/slider/plato3.jpg" alt="Pulpo con verduras"/>5</a>
-<a href="#" title="Solomillos a la parrilla"><img src="imagenes/slider/plato4.jpg" alt="Solomillos a la parrilla"/>6</a>
-<a href="#" title="Tortellinis con setas"><img src="imagenes/slider/plato5.jpg" alt="Tortellinis con setas"/>7</a>
-<a href="#" title="Mus de chocolate"><img src="imagenes/slider/postredecorado.jpg" alt="Mus de chocolate"/>8</a>
-<a href="#" title="Nido de verduras con chuleta"><img src="imagenes/slider/rest_72.jpg" alt="Nido de verduras con chuleta"/>9</a>
-</div></div>
-<span class="wsl"><a href="http://wowslider.com">Animation Gallery</a> by WOWSlider.com v4.8</span>
-	<a href="#" class="ws_frame"></a>
-	<div class="ws_shadow"></div>
-	</div>
-	<script type="text/javascript" src="slider//wowslider.js"></script>
-	<script type="text/javascript" src="slider//script.js"></script>
+			<div class="ws_images"><ul>
+				<li><img src="imagenes/slider/2l0e0210.jpg" alt="Delicias de queso fresco" title="Delicias de queso fresco" id="wows1_0"/></li>
+				<li><img src="imagenes/slider/f58fd__catering_16.jpg" alt="Postre de Frutas" title="Postre de Frutas" id="wows1_1"/></li>
+				<li><img src="imagenes/slider/me1.jpg" alt="Esparragos con hojaldre" title="Esparragos con hojaldre" id="wows1_2"/></li>
+				<li><img src="imagenes/slider/plato2.jpg" alt="Judias en primavera" title="Judias en primavera" id="wows1_3"/></li>
+				<li><img src="imagenes/slider/plato3.jpg" alt="Pulpo con verduras" title="Pulpo con verduras" id="wows1_4"/></li>
+				<li><img src="imagenes/slider/plato4.jpg" alt="Solomillos a la parrilla" title="Solomillos a la parrilla" id="wows1_5"/></li>
+				<li><img src="imagenes/slider/plato5.jpg" alt="Tortellinis con setas" title="Tortellinis con setas" id="wows1_6"/></li>
+				<li><img src="imagenes/slider/postredecorado.jpg" alt="Mus de chocolate" title="Mus de chocolate" id="wows1_7"/></li>
+				<li><img src="imagenes/slider/rest_72.jpg" alt="Nido de verduras con chuleta" title="Nido de verduras con chuleta" id="wows1_8"/></li>
+				</ul>
+			</div>
+			<div class="ws_bullets">
+				<div>
+				<a href="#" title="Delicias de queso fresco"><img src="imagenes/slider/2l0e0210.jpg" alt="Delicias de queso fresco"/>1</a>
+				<a href="#" title="Postre de Frutas"><img src="imagenes/slider/f58fd__catering_16.jpg" alt="Postre de Frutas"/>2</a>
+				<a href="#" title="Esparragos con hojaldre"><img src="imagenes/slider/me1.jpg" alt="Esparragos con hojaldre"/>3</a>
+				<a href="#" title="Judias en primavera"><img src="imagenes/slider/plato2.jpg" alt="Judias en primavera"/>4</a>
+				<a href="#" title="Pulpo con verduras"><img src="imagenes/slider/plato3.jpg" alt="Pulpo con verduras"/>5</a>
+				<a href="#" title="Solomillos a la parrilla"><img src="imagenes/slider/plato4.jpg" alt="Solomillos a la parrilla"/>6</a>
+				<a href="#" title="Tortellinis con setas"><img src="imagenes/slider/plato5.jpg" alt="Tortellinis con setas"/>7</a>
+				<a href="#" title="Mus de chocolate"><img src="imagenes/slider/postredecorado.jpg" alt="Mus de chocolate"/>8</a>
+				<a href="#" title="Nido de verduras con chuleta"><img src="imagenes/slider/rest_72.jpg" alt="Nido de verduras con chuleta"/>9</a>
+				</div>
+			</div>
+				<script type="text/javascript" src="slider//wowslider.js"></script>
+				<script type="text/javascript" src="slider//script.js"></script>
+				<a href="#" class="ws_frame"></a>
+				<div class="ws_shadow"></div>
+			</div>
+	
         <br><br>
         <h2><b>Sobre nosotros</b></h2>
         <p>
