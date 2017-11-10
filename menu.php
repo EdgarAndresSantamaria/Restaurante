@@ -10,8 +10,7 @@
 					//si cualquiera...
                        echo'<li><a href="index.php">Inicio<br /></a></li>
                             <li><a href="cocina.php">Cocina<br /></a></li>		
-                            <li><a href="restaurante.php">Restaurante<br /></a></li>		
-                            <li><a href="contacto.php">Contacto<br /></a></li>' ;
+                            <li><a href="restaurante.php">Restaurante<br /></a></li>' ;
                     }
                     else{if($_SESSION['k_username']=='admin@puzzle.com'){
 						//si administrador...admin@puzzle.com

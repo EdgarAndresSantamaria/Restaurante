@@ -24,29 +24,6 @@ session_start();
 <body>
    
    <SCRIPT language="JavaScript" type="text/javascript"> 
-    function validaPass2() {
-            var valor1 = document.getElementById("password1").value;
-            var valor2 = document.getElementById("password2").value;
-            if(!(valor1==valor2)) {
-                alert("Las contraseñas introducidas son diferentes.");
-                document.getElementById("password2").focus();
-                return false;
-            }
-            else{
-                return true;
-            }
-        }
-    function validaTelefono(campo) {
-            var valor = campo.value;
-            if(!(/^[0-9]{2,3}-? ?[0-9]{6,7}$/.test(valor)) ) {
-                alert("El teléfono introducido no es válido.");
-                document.getElementById("telefono").focus();
-                return false;
-            }
-            else{
-                return true;
-            }
-        }
     function validacion(campo) {
             var valor = campo.value;
             if( valor == null || valor.length==0 ){
@@ -79,7 +56,7 @@ session_start();
     </script>
     <?php
     if(!(isset($_REQUEST['enviar'])))
-    {//ENSEÑA EL FORMULARIO PARA LA SELECCION DEL PLATO
+    {
     ?> 
    <div id="contenedor">
     <div id="cabecera">
@@ -100,12 +77,10 @@ session_start();
         
         <div  id="unaColumna">
             <h1>Ponte en contacto con nosotros</h1>
-            <h4>Puede contactar con nosotros a trav&eacute;s de este formulario.<br>
-                Les responderemos a la mayor brevedad. Muchas gracias</h4>
+            <h4>Puede contactar con nosotros a trav&eacute;s de este formulario. Muchas gracias.</h4>
             <div id="formulario">
             <?php
            
-            if (isset($_SESSION['k_username'])) {
            #incluimos unas variables con el nombre de la tabla
            $tabla="usuario";
 
@@ -128,57 +103,25 @@ session_start();
 
            if($sentencia){
                if(mysqli_affected_rows($conectar)>0){
-                   echo "<h2>Rellene todos los campos del formulario:</h1>";
+                   echo "<h2>Introduzca el mensaje:</h1>";
                    echo "<table width=600 >";
                    while($registro=  mysqli_fetch_array($sentencia)){
-                       echo '
+                      
+							echo '<b>Hola '.$_SESSION['k_username'].', en este apartado podra escribir un comentario al administrador de la web.</b>
                            <form method="POST" action="contacto.php" name="form1" id="form1" >
-                           <tr>
-                               <td>
-                                   <b>Nombre:<span>*</span></b>
-                               </td>
-                               <td >';
-                                       echo '<input type="text" id="nombre" name="nombre" onchange="validacion(this);" value="'.$registro["nombre"].'"/>';
-                            echo'</td>
-                           </tr>
-                            <tr>
-                               <td>
-                                   <b>Apellidos:<span>*</span></b>
-                               </td>
-                               <td >';
-                                       echo '<input type="text" id="apellidos" name="apellidos" onchange="validacion(this);" value="'.$registro["apellidos"].'"/>';
-                            echo'</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <b>E-mail:<span>*</span></b>
-                               </td>
-                               <td >';
-                                       echo '<input type="text" id="email" name="email" onchange="validaEmail(this);" value="'.$registro["email"].'"/>';
-                            echo'</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <b>Asunto:<span>*</span></b>
-                               </td>
-                               <td >';
-                                      echo '<input type="text" id="asunto" name="asunto" onchange="validacion(this);" placeholder="Escriba el asunto" />';
-                            echo'</td>
-                           </tr>
-                           <tr>
+						   <tr>
                                <td>
                                    <b>Mensaje:<span>*</span></b>
                                </td>
                                <td >';
                                        echo '<textarea rows="8" cols="50" name="mensaje" id="mensaje" placeholder="Escriba su mensaje." onchange="validacion(this);"></textarea>';
                             echo'</td>
-                           </tr>
-                           
-                            <input type="hidden" name="emailAdmin" id="emailAdmin" value="maitane_3_@hotmail.com"/>
+                           </tr><tr></tr>
+						   <input type="hidden" name="codUsuario" value="'.$registro["cod-usuario"].'"/>
                            <tr>
                                <td colspan="2">
                                    <p align="center">
-                                       <button name="enviar" onclick="return validarTodo();" value="submit">Enviar email</button>
+                                       <button name="enviar" onclick="return validarTodo();" value="submit">Enviar comentario</button>
                                    </p>
                                </td>
                            </tr>
@@ -203,69 +146,10 @@ session_start();
            #cerramos la conexion con la base de datos y comprobamos si da errores.
            if(!mysqli_close($conectar)){
                print"<br>No ha podido cerrarse la conexion, mediante procesos, con el servidor de bases de datos. <br>."; 
-           }
-     }
-     else{
-         echo "<h2>Rellene todos los campos del formulario:</h1>";
-                   echo "<table aling=center width=600 >";
-                   
-                       echo '<form method="POST" action="contacto.php" name="form1" id="form1" >
-                           <tr>
-                               <td>
-                                   <b>Nombre:<span>*</span></b>
-                               </td>
-                               <td>';
-                                       echo '<input type="text" id="nombre" name="nombre" onchange="validacion(this);" />';
-                            echo'</td>
-                           </tr>
-                            <tr>
-                               <td>
-                                   <b>Apellidos:<span>*</span></b>
-                               </td>
-                               <td>';
-                                       echo '<input type="text" id="apellidos" name="apellidos" onchange="validacion(this);" />';
-                            echo'</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <b>E-mail:<span>*</span></b>
-                               </td>
-                               <td >';
-                                       echo '<input type="text" id="email" name="email" onchange="validaEmail(this);" />';
-                            echo'</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <b>Asunto:<span>*</span></b>
-                               </td>
-                               <td >';
-                                      echo '<input type="text" id="asunto" name="asunto" onchange="validacion(this);" placeholder="Escriba el asunto" />';
-                            echo'</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <b>Mensaje:<span>*</span></b>
-                               </td>
-                               <td >';
-                                       echo '<textarea rows="8" cols="50" name="mensaje" id="mensaje" placeholder="Escriba su mensaje." onchange="validacion(this);"></textarea>';
-                            echo'</td>
-                           </tr>
-                           
-                            <input type="hidden" name="emailAdmin" id="emailAdmin" value="maitane_3_@hotmail.com"/>
-                           <tr>
-                               <td colspan="2">
-                                   <p align="center">
-                                       <button name="enviar" onclick="return validarTodo();" value="submit">Enviar email</button>
-                                   </p>
-                               </td>
-                           </tr>
-                           
-                           </form>';
-                   echo "</table>";
-     }
+			}
+	
            ?> 
             </div>
-            <img id="comida" src="imagenes/plato6.jpg" width="250" height="350"/>
         </div>
         </div>
         
@@ -280,29 +164,54 @@ session_start();
 </div>
 
 <?php
-}
-else{
-        $emailAdmin="maitane_3_@hotmail.com";//$_REQUEST['emailAdmin'];
-        $nombre=$_REQUEST['nombre'];
-        $apellidos=$_REQUEST['apellidos'];
-        $email=$_REQUEST['email'];
-        $asunto=$_REQUEST['asunto'];
+}else{
+        $codigoUsuario=$_REQUEST['codUsuario'];
         $mensaje=$_REQUEST['mensaje'];
-        $contenido='De: '.$nombre.' '.$apellidos.'<br>Asunto: '.$asunto.'<br>Mensaje: '.$mensaje;
+        $tabla="comentario";
+
+        include "conectar.php";
+
+        #conexion, seleccion de tabla y verificacion de errores
+        $conectar =mysqli_connect($cfg_servidor, $cfg_usuario, $cfg_password,$nombre_bd);
+
+        if(!$conectar){
+            echo "<br>No ha podido realizarse la conexion <br>";
+            print "<i>Error numero</i>".mysqli_connect_errno()."<i>equivalente a:</i>".mysqli_connect_error();
+            exit();
+        }
+
+        #escribimos la sentencia MYSQL
+        $sentenciaMYSQL="INSERT INTO $tabla 
+                        (`cod_comentario`, `cod-usuario`, `texto`) 
+                        VALUES (NULL, '$codigoUsuario', '$mensaje')";
+        #tenemos completa la sentencia MYSQL solo falta ejecutarla crear la conexion y ejecutarla
+                $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
+                if($sentencia){
+					//registrado satisfactorio...pasamos a vista cliente
+                    print "<div id='contenedor'>";
+                    print"<h1 id='resultado'>Se ha a&ntilde;adido un nuevo comentario </h1>";
+                    print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='index.php'\" />";
+                    print "</div>";
+                }
+                else{
+					//registrado insatisfactorio..
+                    print "<div id='contenedor'>";
+                    print"<h1 id='resultado'>No ha podido a&ntilde;adir un comentario en la tabla $tabla.</h1>"; 
+                    print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='contacto.php'\" />";
+                    print "</div>";
+                    exit();
+                }
+				#cerramos la conexion con la base de datos y comprobamos si da errores.
+        if(!mysqli_close($conectar)){
+            print "<div id='contenedor'>";
+            print"<h1 id='resultado'>No ha podido cerrarse la conexion, mediante procesos, con el servidor de bases de datos.</h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='index.php'\" />";
+            print "</div>";
+        }
+      }
+
         
-        $encabezados = "From: $email\nReply-To: $email\nContent-Type: text/html; charset=iso-8859-1" ;
-        print "<div id='contenedor'>";
-        $bool=mail($emailAdmin, $asunto, $contenido, $encabezados) or die ("<h1 id='resultado'>No se ha podido enviar tu mensaje.</h1>") ;
-		if($bool){
-			echo "Mensaje enviado";
-		}else{
-			echo "Mensaje no enviado";
-		}
-		echo "<h1 id='resultado'>Tu mensaje ha sido enviado con este contenido:</h1>" ;
-        echo "<p style='margin: 0 5% 5%;'><b>$contenido</b></p>" ;
-        print"<br><input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='contacto.php'\" />";
-        print "</div>"; 
-}
+
 ?>
 </body>
 </html>
