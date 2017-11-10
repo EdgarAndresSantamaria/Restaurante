@@ -67,9 +67,7 @@ session_start();
                 <h3>Horario:</h3>
                 (L-S) 12:00-00:00<br />
                 
-                <h3>Tel&eacute;fono:</h3>944-444-444 
-                <h3>Email: </h3><a href="contacto.php">envianos un email</a>
-                
+                <h3>Tel&eacute;fono:</h3>944-444-444
                 
         </div>
     </div>
