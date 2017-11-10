@@ -201,13 +201,18 @@ a.back{
 #principal span{
     color:red;
 }
-#unaColumna #wowslider-container1 span{
-    color:black;
+//#unaColumna #wowslider-container1 span{
+   
+}
+#unaColumna #wowslider-container1{
+	height:300px;
+	color:black;
 }
 #unaColumna{
     padding: 20px;
     background-color: rgba(0,0,0,0.5);
     width:92%;
+	height:auto;
     margin:0px 20px;
     margin-bottom: 20px;
     float: left;
@@ -216,6 +221,7 @@ a.back{
     box-shadow: #666 3px 5px 8px;
 }
 #unaColumna iframe{
+	
     float: left;
     margin-right: 60px;
 }
@@ -223,10 +229,13 @@ a.back{
     font-size: 8px;
 }
 #unaColumna span{
-    color:red;
+    color:black;
 }
 p{
     text-align: justify;
+}
+div#ws_bullets{
+height:100px;
 }
 div#pIzq{
     float:left;
