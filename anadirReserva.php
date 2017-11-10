@@ -312,14 +312,14 @@ else{//si se ha enviado
         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>Se ha añadido una reserva nueva en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+            print"<h1 id='resultado'>Se ha a&ntilde;adido una reserva nueva </h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
             print "</div>";
         }
         else{
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>No ha podido añadir una reserva en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+            print"<h1 id='resultado'>No ha podido a&ntilde;adir una reserva </h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
             print "</div>";
             exit();
         }

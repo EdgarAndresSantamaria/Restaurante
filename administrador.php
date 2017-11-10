@@ -146,6 +146,7 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
         <ul>		
                 <li><a id="lU" class="menuSecundario" href=listarUsuarios.php>Lista de usuarios</a></li>
                 <li><a id="bU" class="menuSecundario" href=borrarUsuario.php>Borrar un usuario</a></li>
+				<li><a id="zU" class="menuSecundario" href=listarComentarios.php>Lista de comentarios</a></li>
         </ul>
              <h2>Opciones de reservas:</h2>
         <ul>

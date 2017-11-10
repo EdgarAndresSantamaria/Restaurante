@@ -164,7 +164,7 @@ session_start();
              <img src="imagenes/puzzle.png" alt="Smiley face" height="125" width="600">
         </div>
         <div id="login">
-             <input id='atras' type="button" value="Volver al Menú" onclick="location.href='reserva.php'" />
+             <input id='atras' type="button" value="Volver al Men&uacute;" onclick="location.href='reserva.php'" />
         </div>
     </div>
     <div id="general">
@@ -381,14 +381,14 @@ else{
         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>Se ha actualizado $codReserva correctamente en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='reserva.php'\" />";
+            print"<h1 id='resultado'>Se ha actualizado $codReserva correctamente. </h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='reserva.php'\" />";
             print "</div>";
         }
         else{
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>No ha podido actualizar la reserva $codReserva en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='reserva.php'\" />";
+            print"<h1 id='resultado'>No ha podido actualizar la reserva $codReserva.</h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='reserva.php'\" />";
             print "</div>";            
             exit();
         }
@@ -397,7 +397,7 @@ else{
         if(!mysqli_close($conectar)){
             print "<div id='contenedor'>";
             print"<h1 id='resultado'>No ha podido cerrarse la conexion, mediante procesos, con el servidor de bases de datos.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='reserva.php'\" />";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='reserva.php'\" />";
             print "</div>";
         }
 }

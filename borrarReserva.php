@@ -160,14 +160,14 @@ else{//si se ha enviado
         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>Se ha eliminado la reserva \"$codReserva\" de la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+            print"<h1 id='resultado'>Se ha eliminado la reserva \"$codReserva\".</h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
             print "</div>";
         }
         else{
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>No ha podido eliminar la reserva en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+            print"<h1 id='resultado'>No ha podido eliminar la reserva.</h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
             print "</div>";
             exit();
         }
@@ -176,7 +176,7 @@ else{//si se ha enviado
         if(!mysqli_close($conectar)){
             print "<div id='contenedor'>";
             print"<h1 id='resultado'>No ha podido cerrarse la conexion, mediante procesos, con el servidor de bases de datos.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"history.back(-1)\" />";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"history.back(-1)\" />";
             print "</div>";
             
         }

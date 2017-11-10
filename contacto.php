@@ -73,11 +73,12 @@ session_start();
              <?php mostrarMenu(); ?>
             </ul>
     </div>
-    <div id="general">
+    <div id="general"> 
         
         <div  id="unaColumna">
             <h1>Ponte en contacto con nosotros</h1>
-            <h4>Puede contactar con nosotros a trav&eacute;s de este formulario. Muchas gracias.</h4>
+            <h4>Puede contactar con nosotros a trav&eacute;s de este formulario, 
+			el restaurante Puzzle le responder&aacute; con un e-mail con la mayor brevedad. Muchas gracias.</h4>
             <div id="formulario">
             <?php
            
@@ -107,14 +108,14 @@ session_start();
                    echo "<table width=600 >";
                    while($registro=  mysqli_fetch_array($sentencia)){
                       
-							echo '<b>Hola '.$_SESSION['k_username'].', en este apartado podra escribir un comentario al administrador de la web.</b>
+							echo '<b>Hola '.$_SESSION['k_username'].', en este apartado podra escribir un comentario para el restaurante Puzzle.</b>
                            <form method="POST" action="contacto.php" name="form1" id="form1" >
 						   <tr>
                                <td>
                                    <b>Mensaje:<span>*</span></b>
                                </td>
                                <td >';
-                                       echo '<textarea rows="8" cols="50" name="mensaje" id="mensaje" placeholder="Escriba su mensaje." onchange="validacion(this);"></textarea>';
+                            echo '<textarea rows="8" cols="50" name="mensaje" id="mensaje" placeholder="Escriba su mensaje." onchange="validacion(this);"></textarea>';
                             echo'</td>
                            </tr><tr></tr>
 						   <input type="hidden" name="codUsuario" value="'.$registro["cod-usuario"].'"/>
