@@ -11,7 +11,6 @@
 
         #conexion, seleccion de tabla y verificacion de errores
         $conectar =mysqli_connect($cfg_servidor, $cfg_usuario, $cfg_password,$nombre_bd);
-
         if(!$conectar){
             echo "<br>No ha podido realizarse la conexion <br>";
             print "<i>Error numero</i>".mysqli_connect_errno()."<i>equivalente a:</i>".mysqli_connect_error();

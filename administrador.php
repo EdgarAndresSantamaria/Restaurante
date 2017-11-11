@@ -63,6 +63,12 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
                     $("#principal").load('borrarReservasAdmin.php');
                     //return false;                     
                 });
+				
+				$("#lCom").click(function(event) {
+                	event.preventDefault();
+                    $("#principal").load('listarComentarios.php');
+                    //return false;
+                });   
             });
            
         </script>
@@ -146,12 +152,15 @@ if($_SESSION['k_username']=='admin@puzzle.com'){
         <ul>		
                 <li><a id="lU" class="menuSecundario" href=listarUsuarios.php>Lista de usuarios</a></li>
                 <li><a id="bU" class="menuSecundario" href=borrarUsuario.php>Borrar un usuario</a></li>
-				<li><a id="zU" class="menuSecundario" href=listarComentarios.php>Lista de comentarios</a></li>
         </ul>
              <h2>Opciones de reservas:</h2>
         <ul>
                 <li><a id="ltR" class="menuSecundario" href=listaReservasAdmin.php>Lista de reservas</a></li>
                 <li><a id="btR" class="menuSecundario" href=borrarReservasAdmin.php>Borrar una reserva</a></li>
+        </ul>
+		      <h2>Opciones de comentarios:</h2>
+        <ul>
+                <li><a id="lCom" class="menuSecundario" href=listarComentarios.php>Lista de comentarios</a></li>
         </ul>
         </div>
         <div id="principal">
