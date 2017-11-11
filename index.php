@@ -56,7 +56,6 @@ session_start();
                 de c&oacute;mo debe ser un restaurante:la cocina, el servicio y el entorno se combinan
                 para conseguir la satisfacci&oacute;n completa del cliente. En nuestro sitio web explicamos 
                 como lo hacemos.</p>
-                <a href="contacto.php">Haga Click aqu&iacute; si quiere saber como contactar con nosotros.</a><br><br>
                 <em><b>Para poder efectuar una reserva en nuestro establecimiento a traves de la p&aacute;gina web,
                     antes deber&aacute; registrarse o loguearse pudiendo hacerlo a trav&eacute;s del apartado superior izquierdo
                     siguiendo las indicaciones.</b> </em>
