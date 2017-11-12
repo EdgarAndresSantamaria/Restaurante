@@ -20,7 +20,8 @@ if (isset($_SESSION['k_username'])) {
 <link rel="shortcut icon" href="imagenes/icono.ico">  
     <title>Cocina - Puzzle</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <!-- refresco de información en la misma pagina -->
+	<script type="text/javascript">
              $(document).ready(function() {
             	           	
             	$("#mV").click(function(event) {
@@ -44,20 +45,7 @@ if (isset($_SESSION['k_username'])) {
                 });            
             });
         </script>
-	<script type="text/javascript" src="js//validarLogin.js"></script>
 </head>
-<SCRIPT language="JavaScript" type="text/javascript"> 
-    var valor = campo.value;
-    if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
-        alert("Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales.");
-        document.getElementById("password1").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-</script>
 <body>
 <div id="contenedor">
     <div id="cabecera">
@@ -81,9 +69,9 @@ if (isset($_SESSION['k_username'])) {
             <h2>Elige tu opci&oacute;n:</h2>
         <ul>
 		<!-- lista de menus + carta -->
-                    <li><a class="menuSecundario" href=listarMV.php id="mV" >Men&uacute; Vegetariano</a></li>
-                    <li><a class="menuSecundario" href=listarMN.php id="mN" >Men&uacute; Normal</a></li>		
-                    <li><a class="menuSecundario" href=listarC.php id="C" >Carta</span></a></li>
+                    <li><a class="menuSecundario"  id="mV" >Men&uacute; Vegetariano</a></li>
+                    <li><a class="menuSecundario"  id="mN" >Men&uacute; Normal</a></li>		
+                    <li><a class="menuSecundario"  id="C" >Carta</span></a></li>
             </ul>
         </div>
         <div id="principal">

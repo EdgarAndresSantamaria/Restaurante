@@ -206,8 +206,8 @@ else{
         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
             print "<div id='contenedor'>";
-            print"<h1 id='resultado'>Se ha actualizado tu usuario correctamente en la tabla $tabla.</h1>";
-            print"<input id='atras' type=\"button\" value=\"Volver al Menú\" onclick=\"location.href='reserva.php'\" />";
+            print"<h1 id='resultado'>Se ha actualizado tu usuario correctamente </h1>";
+            print"<input id='atras' type=\"button\" value=\"Volver al Men&uacute;\" onclick=\"location.href='reserva.php'\" />";
             print "</div>";
         }
         else{

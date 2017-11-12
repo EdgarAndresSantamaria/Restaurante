@@ -54,32 +54,7 @@ session_start();
                 });              
             });
         </script>
-<SCRIPT language="JavaScript" type="text/javascript"> 
-function validaEmail(campo) {
-     var valor = campo.value;
-    if(!(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/.test(valor)) ) {
-        alert("El email introducido no es válido.");
-        document.getElementById("email").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-function validaPass1(campo) {
-    var valor = campo.value;
-    if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
-        alert("Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales.");
-        document.getElementById("password1").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-</script>
 </head>
-
 <body>
 <div id="contenedor">
     <div id="cabecera">
@@ -99,16 +74,16 @@ function validaPass1(campo) {
     <div id="general">
         <div id="opciones"><h2>Opciones de reserva:</h2>
             <ul>
-                    <li><a id="lR" class="menuSecundario" href=listarReservas.php>Ver mis reservas</a></li>
-                    <li><a id="aR" class="menuSecundario" href=anadirReserva.php>realizar una reserva</a></li>
-                    <li><a id="mR" class="menuSecundario" href=modificarReserva2.php>Modificar una reserva</a></li>
-                    <li><a id="bR" class="menuSecundario" href=borrarReserva.php>Cancelar una reserva</a></li>
+                    <li><a id="lR" class="menuSecundario" >Ver mis reservas</a></li>
+                    <li><a id="aR" class="menuSecundario" >realizar una reserva</a></li>
+                    <li><a id="mR" class="menuSecundario" >Modificar una reserva</a></li>
+                    <li><a id="bR" class="menuSecundario" >Cancelar una reserva</a></li>
             </ul>
             
             <h2>Opciones de usuario:</h2>
             <ul>
-                    <li><a id="mU" class="menuSecundario" href=modificarUsuario.php>Modificar mis datos </a></li>
-                    <li><a id="dB" class="menuSecundario" href=darBaja.php>Dar de baja mi usuario</a></li>
+                    <li><a id="mU" class="menuSecundario" >Modificar mis datos </a></li>
+                    <li><a id="dB" class="menuSecundario" >Dar de baja mi usuario</a></li>
             </ul>
         </div>
         <div id="principal">

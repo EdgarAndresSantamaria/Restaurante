@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <script type="text/javascript" src="js//validarLogin.js"></script>
 </head>
 <body>
  <?php 

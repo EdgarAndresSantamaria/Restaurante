@@ -10,20 +10,8 @@ session_start();
 <link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
 <link rel="shortcut icon" href="imagenes/icono.ico">
 <script type="text/javascript" src="engine1//jquery.js"></script>
-<script type="text/javascript" src="js//validarLogin.js"></script>
     <title>Restaurante - Puzzle</title>
 </head>
-<SCRIPT language="JavaScript" type="text/javascript"> 
-    var valor = campo.value;
-    if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
-        alert("Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales.");
-        document.getElementById("password1").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
 </script>
 <body>
 <div id="contenedor">

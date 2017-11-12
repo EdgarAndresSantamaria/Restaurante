@@ -8,26 +8,12 @@ session_start();
 <head>
 <link href="css/estilos.css" rel="stylesheet" type="text/css"> 
 <link rel="stylesheet" type="text/css" href="slider/style.css" media="screen" />
-
 <link rel="stylesheet" type="text/css" href="slider/style.css" />
 <script type="text/javascript" src="engine1/jquery.js"></script>
 <link rel="shortcut icon" href="imagenes/icono.ico">
 <script type="text/javascript" src="slider/jquery.js"></script>
     <title>Inicio - Puzzle</title>
 </head>
-
-<SCRIPT language="JavaScript" type="text/javascript"> 
-    var valor = campo.value;
-    if(!(/(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{8,10})$/.test(valor)) ) {
-        alert("Entre 8 y 10 caracteres, por lo menos un digito y un alfanumérico, y no puede contener caracteres espaciales.");
-        document.getElementById("password1").focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-</script>
 <body>
 <div id="contenedor">
     <div id="cabecera">
