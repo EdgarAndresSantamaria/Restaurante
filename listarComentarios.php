@@ -17,7 +17,7 @@
                         }
                         #escribimos la sentencia MYSQL
 						//$sentenciaMYSQL="SELECT 'U.nombre', 'C.texto' FROM 'usuario U', 'comentario C' WHERE 'U.cod-usuario' = 'C.cod-usuario'";
-                        $sentenciaMYSQL="SELECT `cod-usuario`,`texto` FROM $tabla";
+                        $sentenciaMYSQL="SELECT `nombre`,`texto` FROM $tabla Natural join $tabla1";
                         #tenemos completa la sentencia MYSQL solo falta ejecutarla crear la conexion y ejecutarla
                         $sentencia=  mysqli_query($conectar,$sentenciaMYSQL);
         if($sentencia){
