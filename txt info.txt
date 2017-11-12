@@ -1,0 +1,27 @@
+URL = http://galan.ehu.eus/egomez050/WEB
+
+datos Admin:
+
+usuario = admin@puzzle.com
+contraseña = admin1234
+
+Funcionalidad:
+
+1 Cualquiera
+	consultar menu vegetariano
+	consultar menu normal
+	consultar Carta
+
+2 Admin
+	añadir/borrar/modificar plato
+	listar/borrar usuarios
+	listar/borrar reservas
+	listar comentarios
+	(+cualquiera)
+
+3 Usuario
+	
+	ver/realizar/modificar/cancelar reservas
+	modificar datos de usuario
+	dar de baja su usuario
+	(+cualquiera)
